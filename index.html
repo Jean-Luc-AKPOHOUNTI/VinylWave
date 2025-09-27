@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VinylWave - Streaming Audio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,11 +12,9 @@
         <div class="nav-container">
             <div class="logo">🎵 VinylWave</div>
             <ul class="nav-links">
-                <li><a href="#home">Accueil</a></li>
+                <li><a href="#home" class="active">Accueil</a></li>
                 <li><a href="#discover">Découvrir</a></li>
                 <li><a href="#playlists">Playlists</a></li>
-                <li><a href="#radio">Radio</a></li>
-                <li><a href="#about">À propos</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -26,7 +24,7 @@
         </div>
     </nav>
 
-    <section class="hero-section">
+    <section id="home" class="hero-section">
         <div class="hero-container">
             <div class="hero-text">
                 <h1>L'Âme du Vinyle</h1>
@@ -67,13 +65,26 @@
                 </div>
             </div>
         </div>
-        
-        <div class="scroll-indicator">
-            <div><i class="fas fa-chevron-down"></i></div>
-            <div style="font-size: 0.9rem; margin-top: 0.5rem;">Découvrir</div>
+    </section>
+
+    <section id="discover" class="discover-section" style="display: none;">
+        <div class="discover-container">
+            <h2>Découvrir</h2>
+            <p>Explorez vos artistes préférés</p>
+            <div class="carousel-container">
+                <div class="artist-cards"></div>
+            </div>
         </div>
     </section>
 
+    <section id="playlists" class="playlist-section" style="display: none;">
+        <div class="playlist-container">
+            <h2>Playlist</h2>
+            <div class="player-interface"></div>
+        </div>
+    </section>
+
+    <script src="data/artists.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
