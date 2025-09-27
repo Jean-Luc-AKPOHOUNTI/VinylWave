@@ -69,7 +69,7 @@ const artistsData = {
                 id: "poison-ou-antidote",
                 title: "Poison ou antidote",
                 year: 2021,
-                cover: "images/albums/dadju-poison-ou-antidote.jpg",
+                cover: "images/albums/dadju-poison-ou-antidote.webp",
                 tracks: [
                     { title: "Dieu merci", duration: "3:18" },
                     { title: "Grand bain", duration: "3:25" },
@@ -115,14 +115,14 @@ const artistsData = {
     "burna-boy": {
         id: "burna-boy",
         name: "Burna Boy",
-        image: "images/artists/burna-boy.jpg",
+        image: "images/artists/burna-boy.webp",
         popularity: 98,
         albums: [
             {
                 id: "twice-as-tall",
                 title: "Twice As Tall",
                 year: 2020,
-                cover: "images/albums/burna-boy-twice-as-tall.jpg",
+                cover: "images/albums/burna-boy-twice-as-tall.webp",
                 tracks: [
                     { title: "Level Up", duration: "3:10" },
                     { title: "Monsters", duration: "3:45" },
@@ -135,14 +135,14 @@ const artistsData = {
     "wizkid": {
         id: "wizkid",
         name: "Wizkid",
-        image: "images/artists/wizkid.jpg",
+        image: "images/artists/wizkid.webp",
         popularity: 97,
         albums: [
             {
                 id: "made-in-lagos",
                 title: "Made in Lagos",
                 year: 2020,
-                cover: "images/albums/wizkid-made-in-lagos.jpg",
+                cover: "images/albums/wizkid-made-in-lagos.png",
                 tracks: [
                     { title: "Ginger", duration: "3:12" },
                     { title: "Smile", duration: "3:40" }
