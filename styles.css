@@ -400,8 +400,8 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(15px);
+    /* background: rgba(0, 0, 0, 0.8); */
+    backdrop-filter: blur(55px);
     z-index: 1000;
     padding: 1rem 2rem;
     transition: all 0.3s ease;
@@ -555,7 +555,7 @@ body {
 
 .discover-section,
 .playlist-section {
-    min-height: 100vh;
+    height: 100vh;
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     padding: 4rem 2rem;
     display: flex;
