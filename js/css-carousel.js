@@ -82,14 +82,13 @@ class CSSCarousel {
         // Scroll
         window.addEventListener('wheel', (e) => {
             if (!this.isAnimating && document.getElementById('discover').style.display !== 'none') {
-                e.preventDefault();
                 if (e.deltaY > 0) {
                     this.next();
                 } else {
                     this.previous();
                 }
             }
-        });
+        }, { passive: true });
         
         // Clavier
         document.addEventListener('keydown', (e) => {
@@ -253,17 +252,20 @@ class CSSCarousel {
     }
     
     setupCardClicks() {
-        document.addEventListener('click', (e) => {
-            const card = e.target.closest('.artist-card');
-            if (card && card.classList.contains('active')) {
-                const index = parseInt(card.dataset.index);
-                const artist = this.selectedArtists[index];
-                if (artist) {
-                    console.log('Clic sur artiste actif:', artist.name);
-                    this.openArtistModal(artist);
+        const carouselContainer = document.querySelector('.carousel-container');
+        if (carouselContainer) {
+            carouselContainer.addEventListener('click', (e) => {
+                const card = e.target.closest('.artist-card');
+                if (card && card.classList.contains('active')) {
+                    const index = parseInt(card.dataset.index);
+                    const artist = this.selectedArtists[index];
+                    if (artist) {
+                        console.log('Clic sur artiste actif:', artist.name);
+                        this.openArtistModal(artist);
+                    }
                 }
-            }
-        });
+            });
+        }
     }
     
     openArtistModal(artist) {
