@@ -76,6 +76,11 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         // Get section ID from href
         const sectionId = this.getAttribute('href').substring(1);
         showSection(sectionId);
+        
+        // Initialize discover page if needed
+        if (sectionId === 'discover') {
+            setTimeout(() => initCSSCarousel(), 100);
+        }
     });
 });
 

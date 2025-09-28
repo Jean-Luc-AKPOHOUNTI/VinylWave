@@ -211,7 +211,7 @@ const artistsData = {
     "sarkodie": {
         id: "sarkodie",
         name: "Sarkodie",
-        image: "images/artists/sarkodie.jpg",
+        image: "images/artists/sarkodie.webp",
         popularity: 84,
         albums: [
             {
@@ -249,7 +249,7 @@ const artistsData = {
     "olamide": {
         id: "olamide",
         name: "Olamide",
-        image: "images/artists/olamide.jpg",
+        image: "images/artists/olamide.jpeg",
         popularity: 83,
         albums: [
             {
@@ -344,7 +344,7 @@ const artistsData = {
     "mr-eazi": {
         id: "mr-eazi",
         name: "Mr Eazi",
-        image: "images/artists/mr-eazi.jpg",
+        image: "images/artists/mr-eazi.webp",
         popularity: 78,
         albums: [
             {

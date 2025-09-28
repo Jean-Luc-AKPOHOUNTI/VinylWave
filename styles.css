@@ -167,25 +167,6 @@ body {
     box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
 }
 
-.btn-secondary {
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 1.2rem 2.5rem;
-    border-radius: 50px;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    backdrop-filter: blur(10px);
-}
-
-.btn-secondary:hover {
-    border-color: #ff6b35;
-    background: rgba(255, 107, 53, 0.1);
-    transform: translateY(-3px);
-}
-
 .vinyl-container {
     display: flex;
     justify-content: center;
@@ -400,8 +381,8 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    /* background: rgba(0, 0, 0, 0.8); */
-    backdrop-filter: blur(55px);
+    /* background: rgba(199, 67, 6, 0.39); */
+    backdrop-filter: blur(15px);
     z-index: 1000;
     padding: 1rem 2rem;
     transition: all 0.3s ease;

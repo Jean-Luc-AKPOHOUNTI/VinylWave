@@ -6,6 +6,8 @@
     <title>VinylWave - Streaming Audio</title>
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/discover.css">
+
 </head>
 <body>
     <nav class="navbar">
@@ -37,12 +39,7 @@
                 </p>
                 <div class="cta-buttons">
                     <button class="btn-primary">
-                        <i class="fas fa-play" style="margin-right: 0.5rem;"></i>
                         Commencer l'Écoute
-                    </button>
-                    <button class="btn-secondary">
-                        <i class="fas fa-headphones" style="margin-right: 0.5rem;"></i>
-                        Découvrir Plus
                     </button>
                 </div>
             </div>
@@ -68,12 +65,22 @@
     </section>
 
     <section id="discover" class="discover-section" style="display: none;">
-        <div class="discover-container">
-            <h2>Découvrir</h2>
-            <p>Explorez vos artistes préférés</p>
-            <div class="carousel-container">
-                <div class="artist-cards"></div>
+        <div class="discover-container">            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Rechercher un artiste...">
+                <div class="search-results"></div>
             </div>
+            
+            <div class="carousel-container">
+                <div class="carousel-3d" id="carousel-3d">
+                    <div class="carousel-cards"></div>
+                </div>
+            </div>
+            
+            <div class="artist-info-display">
+                <h2 class="current-artist-name">Ninho</h2>
+            </div>
+            
         </div>
     </section>
 
@@ -85,6 +92,10 @@
     </section>
 
     <script src="data/artists.js"></script>
+    <script src="js/placeholders.js"></script>
+    <script src="js/css-carousel.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/playlist-manager.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
