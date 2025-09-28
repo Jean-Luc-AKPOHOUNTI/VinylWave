@@ -11,7 +11,7 @@ const artistsData = {
                 id: "subliminal",
                 title: "Subliminal",
                 year: 2013,
-                cover: "images/albums/gims-subliminal.jpg",
+                cover: "images/albums/subliminal.jpg",
                 tracks: [
                     { title: "J'me tire", duration: "3:32" },
                     { title: "Bella", duration: "3:45" },
@@ -24,7 +24,7 @@ const artistsData = {
                 id: "mon-coeur-avait-raison",
                 title: "Mon cœur avait raison",
                 year: 2015,
-                cover: "images/albums/gims-mon-coeur-avait-raison.jpg",
+                cover: "images/albums/mon-coeur-avait-raison.jpg",
                 tracks: [
                     { title: "Est-ce que tu m'aimes ?", duration: "3:42" },
                     { title: "Sapés comme jamais", duration: "3:38" },
@@ -36,7 +36,7 @@ const artistsData = {
                 id: "ceinture-noire",
                 title: "Ceinture noire",
                 year: 2018,
-                cover: "images/albums/gims-ceinture-noire.jpg",
+                cover: "images/albums/ceinture-noire.jpg",
                 tracks: [
                     { title: "Caméléon", duration: "3:15" },
                     { title: "La même", duration: "3:33" },
@@ -57,7 +57,7 @@ const artistsData = {
                 id: "gentleman-20",
                 title: "Gentleman 2.0",
                 year: 2017,
-                cover: "images/albums/dadju-gentleman-20.jpg",
+                cover: "images/albums/gentleman-20.jpg",
                 tracks: [
                     { title: "Reine", duration: "3:28" },
                     { title: "Jaloux", duration: "3:15" },
@@ -69,7 +69,7 @@ const artistsData = {
                 id: "poison-ou-antidote",
                 title: "Poison ou antidote",
                 year: 2021,
-                cover: "images/albums/dadju-poison-ou-antidote.webp",
+                cover: "images/albums/poison-ou-antidote.webp",
                 tracks: [
                     { title: "Dieu merci", duration: "3:18" },
                     { title: "Grand bain", duration: "3:25" },
@@ -90,7 +90,7 @@ const artistsData = {
                 id: "melodie",
                 title: "Mélodie",
                 year: 2022,
-                cover: "images/albums/tiakola-melodie.jpg",
+                cover: "images/albums/melodie.jpg",
                 tracks: [
                     { title: "La clé", duration: "2:58" },
                     { title: "Gasolina", duration: "3:12" },
@@ -102,7 +102,7 @@ const artistsData = {
                 id: "libre",
                 title: "Libre",
                 year: 2023,
-                cover: "images/albums/tiakola-libre.jpg",
+                cover: "images/albums/libre.jpg",
                 tracks: [
                     { title: "Libre", duration: "3:15" },
                     { title: "Melo", duration: "2:48" },
@@ -122,7 +122,7 @@ const artistsData = {
                 id: "twice-as-tall",
                 title: "Twice As Tall",
                 year: 2020,
-                cover: "images/albums/burna-boy-twice-as-tall.webp",
+                cover: "images/albums/twice-as-tall.webp",
                 tracks: [
                     { title: "Level Up", duration: "3:10" },
                     { title: "Monsters", duration: "3:45" },
@@ -142,7 +142,7 @@ const artistsData = {
                 id: "made-in-lagos",
                 title: "Made in Lagos",
                 year: 2020,
-                cover: "images/albums/wizkid-made-in-lagos.png",
+                cover: "images/albums/made-in-lagos.png",
                 tracks: [
                     { title: "Ginger", duration: "3:12" },
                     { title: "Smile", duration: "3:40" }
@@ -161,7 +161,7 @@ const artistsData = {
                 id: "a-good-time",
                 title: "A Good Time",
                 year: 2019,
-                cover: "images/albums/davido-a-good-time.jpg",
+                cover: "images/albums/a-good-time.jpg",
                 tracks: [
                     { title: "Risky", duration: "3:05" },
                     { title: "IF", duration: "3:20" }
@@ -180,7 +180,7 @@ const artistsData = {
                 id: "celia",
                 title: "Celia",
                 year: 2020,
-                cover: "images/albums/tiwa-savage-celia.jpg",
+                cover: "images/albums/celia.jpg",
                 tracks: [
                     { title: "Koroba", duration: "3:18" },
                     { title: "Attention", duration: "3:08" }
@@ -218,7 +218,7 @@ const artistsData = {
                 id: "black-love",
                 title: "Black Love",
                 year: 2019,
-                cover: "images/albums/sarkodie-black-love.jpg",
+                cover: "images/albums/sarkodie-black-love.webp",
                 tracks: [
                     { title: "Lucky", duration: "3:22" },
                     { title: "No Fugazy", duration: "3:35" }
@@ -237,7 +237,7 @@ const artistsData = {
                 id: "reign",
                 title: "Reign",
                 year: 2018,
-                cover: "images/albums/shatta-wale-reign.jpg",
+                cover: "images/albums/shatta-wale-reign.webp",
                 tracks: [
                     { title: "Disrespectful", duration: "3:05" },
                     { title: "Gringo", duration: "3:40" }
@@ -275,7 +275,7 @@ const artistsData = {
                 id: "no-bad-songz",
                 title: "No Bad Songz",
                 year: 2018,
-                cover: "images/albums/kizz-daniel-no-bad-songz.jpg",
+                cover: "images/albums/kizz-daniel-no-bad-songz.webp",
                 tracks: [
                     { title: "Mama", duration: "3:20" },
                     { title: "Fvck You", duration: "3:05" }
@@ -294,7 +294,7 @@ const artistsData = {
                 id: "rema-ep",
                 title: "Rema (EP)",
                 year: 2019,
-                cover: "images/albums/rema-ep.jpg",
+                cover: "images/albums/rema-ep.webp",
                 tracks: [
                     { title: "Iron Man", duration: "2:40" },
                     { title: "Dumebi", duration: "3:05" }
@@ -313,7 +313,7 @@ const artistsData = {
                 id: "about-30",
                 title: "About 30",
                 year: 2018,
-                cover: "images/albums/adekunle-gold-about-30.jpg",
+                cover: "images/albums/adekunle-gold-about-30.webp",
                 tracks: [
                     { title: "Sinner", duration: "3:25" },
                     { title: "Something Different", duration: "3:12" }
@@ -351,7 +351,7 @@ const artistsData = {
                 id: "life-is-eazi-vol-2",
                 title: "Life Is Eazi, Vol. 2",
                 year: 2019,
-                cover: "images/albums/mr-eazi-life-is-eazi-vol-2.jpg",
+                cover: "images/albums/mr-eazi-life-is-eazi-vol-2.webp",
                 tracks: [
                     { title: "Leg Over", duration: "3:22" },
                     { title: "E Be Tins", duration: "3:10" }
@@ -370,7 +370,7 @@ const artistsData = {
                 id: "eve",
                 title: "Eve",
                 year: 2014,
-                cover: "images/albums/angelique-kidjo-eve.jpg",
+                cover: "images/albums/angelique-kidjo-eve.webp",
                 tracks: [
                     { title: "Agolo", duration: "4:05" },
                     { title: "Batonga", duration: "4:22" }
@@ -382,14 +382,14 @@ const artistsData = {
     "salif-keita": {
         id: "salif-keita",
         name: "Salif Keita",
-        image: "images/artists/salif-keita.jpg",
+        image: "images/artists/salif-keita.jpeg",
         popularity: 87,
         albums: [
             {
                 id: "moffou",
                 title: "Moffou",
                 year: 2002,
-                cover: "images/albums/salif-keita-moffou.jpg",
+                cover: "images/albums/salif-keita-moffou.webp",
                 tracks: [
                     { title: "Moffou", duration: "5:00" },
                     { title: "Seydou", duration: "4:12" }
@@ -408,7 +408,7 @@ const artistsData = {
                 id: "comme-prevu",
                 title: "Comme prévu",
                 year: 2017,
-                cover: "images/albums/ninho-comme-prevu.jpg",
+                cover: "images/albums/ninho-comme-prevu.webp",
                 tracks: [
                     { title: "Mamacita", duration: "3:25" },
                     { title: "Goutte d'eau", duration: "3:18" },
@@ -419,7 +419,7 @@ const artistsData = {
                 id: "destin",
                 title: "Destin",
                 year: 2019,
-                cover: "images/albums/ninho-destin.jpg",
+                cover: "images/albums/ninho-destin.webp",
                 tracks: [
                     { title: "Lettre à une femme", duration: "4:12" },
                     { title: "Réseaux", duration: "3:28" },
@@ -439,7 +439,7 @@ const artistsData = {
                 id: "nero-nemesis",
                 title: "Nero Nemesis",
                 year: 2015,
-                cover: "images/albums/booba-nero-nemesis.jpg",
+                cover: "images/albums/booba-nero-nemesis.webp",
                 tracks: [
                     { title: "Validée", duration: "3:45" },
                     { title: "OKLM", duration: "3:28" },
@@ -459,7 +459,7 @@ const artistsData = {
                 id: "nakamura",
                 title: "Nakamura",
                 year: 2018,
-                cover: "images/albums/aya-nakamura-nakamura.jpg",
+                cover: "images/albums/aya-nakamura-nakamura.webp",
                 tracks: [
                     { title: "Djadja", duration: "2:56" },
                     { title: "Copines", duration: "3:12" },
@@ -479,7 +479,7 @@ const artistsData = {
                 id: "dans-la-legende",
                 title: "Dans la légende",
                 year: 2016,
-                cover: "images/albums/pnl-dans-la-legende.jpg",
+                cover: "images/albums/pnl-dans-la-legende.webp",
                 tracks: [
                     { title: "DA", duration: "4:15" },
                     { title: "Naha", duration: "3:42" },

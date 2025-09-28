@@ -4,14 +4,13 @@ class CSSCarousel {
         this.selectedArtists = this.getSelectedArtists();
         this.currentIndex = 0;
         this.isAnimating = false;
-        this.radius = 350;
+        this.radius = 550;
         
         this.init();
     }
     
     getSelectedArtists() {
-        const artistIds = ['ninho', 'wizkid', 'tiakola', 'gims', 'davido', 'kizz-daniel', 'dadju', 'burna-boy', 'mr-eazi', 'rema'];
-        return artistIds.map(id => artistsData[id]).filter(artist => artist);
+        return Object.values(artistsData);
     }
     
     init() {
@@ -50,13 +49,7 @@ class CSSCarousel {
                 </div>
             `;
             
-            card.addEventListener('click', () => {
-                if (index === this.currentIndex) {
-                    this.openArtistModal(artist);
-                } else {
-                    this.rotateTo(index);
-                }
-            });
+            // Pas d'event listener ici
             
             container.appendChild(card);
         });
@@ -109,6 +102,9 @@ class CSSCarousel {
         
         // Barre de recherche
         this.setupSearch();
+        
+        // Gestionnaire de clic global
+        this.setupCardClicks();
     }
     
     setupSearch() {
@@ -254,6 +250,30 @@ class CSSCarousel {
             'rema': 'Afrobeats'
         };
         return genres[artistId] || 'Musique';
+    }
+    
+    setupCardClicks() {
+        document.addEventListener('click', (e) => {
+            const card = e.target.closest('.artist-card');
+            if (card && card.classList.contains('active')) {
+                const index = parseInt(card.dataset.index);
+                const artist = this.selectedArtists[index];
+                if (artist) {
+                    console.log('Clic sur artiste actif:', artist.name);
+                    this.openArtistModal(artist);
+                }
+            }
+        });
+    }
+    
+    openArtistModal(artist) {
+        console.log('Tentative ouverture modal pour:', artist.name);
+        if (window.ArtistModal && artist) {
+            const modal = new ArtistModal(artist);
+            modal.show();
+        } else {
+            console.log('Erreur: ArtistModal non disponible ou artiste invalide');
+        }
     }
 
     setupListenButton() {
