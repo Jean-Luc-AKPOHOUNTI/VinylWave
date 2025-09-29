@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="css/discover.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/playlist.css">
 
 </head>
 <body>
@@ -87,8 +88,154 @@
 
     <section id="playlists" class="playlist-section" style="display: none;">
         <div class="playlist-container">
-            <h2>Playlist</h2>
-            <div class="player-interface"></div>
+            <!-- Section Lecteur Vinyle -->
+            <div class="vinyl-player-section">                
+                <div class="album-cover-main">
+                    <img src="images/albums/gentleman-20.jpg" alt="Gentleman 2.0 - Dadju">
+                </div>
+                
+                <div class="audio-controls">
+                    <button class="control-btn shuffle-btn">
+                        <svg class="control-icon" viewBox="0 0 24 24">
+                            <path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="control-btn prev-btn">
+                        <svg class="control-icon" viewBox="0 0 24 24">
+                            <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="control-btn play-pause-btn">
+                        <svg class="control-icon play-icon" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <svg class="control-icon pause-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="control-btn next-btn">
+                        <svg class="control-icon" viewBox="0 0 24 24">
+                            <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="control-btn repeat-btn">
+                        <svg class="control-icon" viewBox="0 0 24 24">
+                            <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span class="current-time">1:23</span>
+                        <span class="total-time">3:28</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 40%;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section Liste des pistes -->
+            <div class="tracklist-section">
+                <div class="tracklist-header">
+                    <div class="tracklist-title">Gentleman 2.0</div>
+                    <div class="album-info">
+                        <div>Dadju • 2017</div>
+                        <div>4 pistes • 14 min</div>
+                    </div>
+                </div>
+                
+                <div class="tracks-container">
+                    <div class="track-item active">
+                        <div class="track-number">1</div>
+                        <div class="track-info">
+                            <div class="track-title">Reine</div>
+                            <div class="track-artist">Dadju</div>
+                        </div>
+                        <div class="track-duration">3:28</div>
+                        <div class="track-actions">
+                            <button class="track-action-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                            <button class="track-action-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <div class="track-number">2</div>
+                        <div class="track-info">
+                            <div class="track-title">Jaloux</div>
+                            <div class="track-artist">Dadju</div>
+                        </div>
+                        <div class="track-duration">3:15</div>
+                        <div class="track-actions">
+                            <button class="track-action-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                            <button class="track-action-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <div class="track-number">3</div>
+                        <div class="track-info">
+                            <div class="track-title">Bob Marley</div>
+                            <div class="track-artist">Dadju</div>
+                        </div>
+                        <div class="track-duration">3:42</div>
+                        <div class="track-actions">
+                            <button class="track-action-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                            <button class="track-action-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <div class="track-number">4</div>
+                        <div class="track-info">
+                            <div class="track-title">Compliqué</div>
+                            <div class="track-artist">Dadju</div>
+                        </div>
+                        <div class="track-duration">3:33</div>
+                        <div class="track-actions">
+                            <button class="track-action-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                            <button class="track-action-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

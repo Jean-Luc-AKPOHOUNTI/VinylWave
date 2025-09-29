@@ -1,0 +1,363 @@
+/* Styles pour la section Playlist - Concept Vinyle Player */
+
+.playlist-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.playlist-container {
+    max-width: 1400px;
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+}
+
+/* Section Lecteur Album */
+.vinyl-player-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.now-playing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.now-playing-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: white;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.now-playing-artist {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.3rem;
+}
+
+.now-playing-album {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Album Cover Principal */
+.album-cover-main {
+    width: clamp(300px, 35vw, 450px);
+    height: clamp(300px, 35vw, 450px);
+    margin: 2rem auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 
+        0 25px 80px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 107, 53, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.album-cover-main:hover {
+    transform: scale(1.02);
+    box-shadow: 
+        0 30px 100px rgba(0, 0, 0, 0.8),
+        0 0 0 1px rgba(255, 107, 53, 0.4),
+        0 0 40px rgba(255, 107, 53, 0.2);
+}
+
+.album-cover-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.album-cover-main:hover img {
+    transform: scale(1.05);
+}
+
+/* Contrôles Audio */
+.audio-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 107, 53, 0.3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.control-btn:hover {
+    border-color: #ff6b35;
+    background: rgba(255, 107, 53, 0.2);
+    transform: scale(1.1);
+}
+
+.play-pause-btn {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    border: none;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+}
+
+.play-pause-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+}
+
+.control-icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.play-pause-btn .control-icon {
+    width: 28px;
+    height: 28px;
+}
+
+/* Barre de progression */
+.progress-container {
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b35, #f7931e);
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.1s ease;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+}
+
+/* Volume et options */
+.volume-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.volume-slider {
+    width: 100px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Section Liste des pistes */
+.tracklist-section {
+    background: transparent;
+    padding: 2rem;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.tracklist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.tracklist-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.album-info {
+    text-align: right;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tracks-container {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.track-item:hover {
+    background: rgba(255, 107, 53, 0.1);
+    transform: translateX(5px);
+}
+
+.track-item.active {
+    background: rgba(255, 107, 53, 0.2);
+    border-left: 3px solid #ff6b35;
+}
+
+.track-number {
+    width: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+.track-item.active .track-number {
+    color: #ff6b35;
+}
+
+.track-info {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.track-title {
+    color: white;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.track-artist {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.track-duration {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    min-width: 50px;
+    text-align: right;
+}
+
+.track-actions {
+    display: flex;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.track-item:hover .track-actions {
+    opacity: 1;
+}
+
+.track-action-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.track-action-btn:hover {
+    color: #ff6b35;
+    background: rgba(255, 107, 53, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .playlist-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        height: auto;
+    }
+    
+    .album-cover-main {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .tracklist-section {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .playlist-container {
+        padding: 1rem;
+    }
+    
+    .audio-controls {
+        gap: 1rem;
+    }
+    
+    .control-btn {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .play-pause-btn {
+        width: 60px;
+        height: 60px;
+    }
+}

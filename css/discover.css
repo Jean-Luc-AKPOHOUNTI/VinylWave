@@ -2,7 +2,7 @@
 
 .discover-section {
     height: 90vh;
-    background: linear-gradient(135deg, #0000009a 0%, #2a2a2a 100%);
+    background: #f7921e00;
     margin-top: 60px;
     display: flex;
     flex-direction: column;
