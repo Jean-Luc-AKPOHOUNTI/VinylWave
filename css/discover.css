@@ -1,8 +1,11 @@
 /* Styles pour la page Découvrir */
 
 .discover-section {
-    height: 90vh;
-    background: #f7921e00;
+    height: 93vh;
+    background-image: url('../images/Download.png');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(25px);
     margin-top: 60px;
     display: flex;
     flex-direction: column;
@@ -123,13 +126,14 @@
 
 .carousel-container {
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     position: relative;
     perspective: 1500px;
     overflow: visible;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* border:#ffffffe7 solid 1px; */
 }
 
 .carousel-3d {
@@ -233,9 +237,9 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    margin-top: 1rem;
     z-index: 10;
     flex-wrap: wrap;
+    /* border:#ffffffe7 solid 1px; */
 }
 
 .artist-counter {
@@ -431,6 +435,148 @@
     object-fit: cover;
 }
 
+/* Modal Instructions */
+.instructions-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.instructions-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.instructions-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 90%;
+    max-width: 450px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.8);
+}
+
+.instructions-modal.show .instructions-content {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.instructions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.instructions-header h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.close-instructions {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-instructions:hover {
+    color: #ff6b35;
+}
+
+.instructions-body {
+    padding: 2rem;
+}
+
+.instruction-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.instruction-item:last-child {
+    margin-bottom: 0;
+}
+
+.keys-group {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.key {
+    display: inline-block;
+    background: rgba(255, 107, 53, 0.2);
+    color: #ff6b35;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    font-family: 'Poppins', monospace;
+    min-width: 35px;
+    text-align: center;
+}
+
+.instructions-footer {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.got-it-btn {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+.got-it-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(255, 107, 53, 0.6);
+}
+
 @media (max-width: 768px) {
     .discover-container {
         padding: 1rem;
@@ -448,5 +594,14 @@
         grid-column: 1;
         grid-row: 2;
         height: 70vh;
+    }
+    
+    .instructions {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .instructions p {
+        font-size: 0.8rem;
     }
 }

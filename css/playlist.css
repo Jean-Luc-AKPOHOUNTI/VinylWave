@@ -18,6 +18,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
+    margin-top: 6rem;
     align-items: stretch;
 }
 
@@ -94,7 +95,7 @@
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
 }
 
 .control-btn {
@@ -240,6 +241,26 @@
     flex: 1;
     overflow-y: auto;
     padding-right: 0.5rem;
+}
+
+/* Custom scrollbar */
+.tracks-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tracks-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.tracks-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.tracks-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #f7931e, #ff6b35);
 }
 
 .track-item {

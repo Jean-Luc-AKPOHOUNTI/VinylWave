@@ -60,7 +60,59 @@ function showSection(sectionId) {
     if (targetSection) {
         targetSection.style.display = 'flex';
         setTimeout(() => targetSection.classList.add('active'), 50);
+        
+        // Show instructions modal for discover section (only once)
+        if (sectionId === 'discover') {
+            const hasSeenInstructions = localStorage.getItem('vinylwave-instructions-seen');
+            if (!hasSeenInstructions) {
+                setTimeout(() => showInstructionsModal(), 500);
+            }
+        }
     }
+}
+
+// Instructions Modal
+function showInstructionsModal() {
+    const modal = document.getElementById('instructions-modal');
+    if (modal) {
+        modal.classList.add('show');
+    }
+}
+
+function hideInstructionsModal() {
+    const modal = document.getElementById('instructions-modal');
+    if (modal) {
+        modal.classList.remove('show');
+        // Mark as seen in localStorage
+        localStorage.setItem('vinylwave-instructions-seen', 'true');
+    }
+}
+
+// Setup instructions modal events
+function setupInstructionsModal() {
+    const modal = document.getElementById('instructions-modal');
+    const closeBtn = document.querySelector('.close-instructions');
+    const gotItBtn = document.querySelector('.got-it-btn');
+    const backdrop = document.querySelector('.modal-backdrop');
+    
+    if (closeBtn) {
+        closeBtn.addEventListener('click', hideInstructionsModal);
+    }
+    
+    if (gotItBtn) {
+        gotItBtn.addEventListener('click', hideInstructionsModal);
+    }
+    
+    if (backdrop) {
+        backdrop.addEventListener('click', hideInstructionsModal);
+    }
+    
+    // Close with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('show')) {
+            hideInstructionsModal();
+        }
+    });
 }
 
 // Navigation active state
@@ -87,7 +139,27 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // Initialize with home section
 window.addEventListener('load', () => {
     showSection('home');
+    setupInstructionsModal();
+    setupStartListeningButton();
 });
+
+// Setup start listening button
+function setupStartListeningButton() {
+    const startBtn = document.getElementById('start-listening-btn');
+    if (startBtn) {
+        startBtn.addEventListener('click', () => {
+            // Update navigation
+            document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
+            document.querySelector('a[href="#discover"]').classList.add('active');
+            
+            // Show discover section
+            showSection('discover');
+            
+            // Initialize carousel
+            setTimeout(() => initCSSCarousel(), 100);
+        });
+    }
+}
 
 
 

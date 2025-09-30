@@ -4,7 +4,7 @@ class CSSCarousel {
         this.selectedArtists = this.getSelectedArtists();
         this.currentIndex = 0;
         this.isAnimating = false;
-        this.radius = 550;
+        this.radius = 700;
         
         this.init();
     }

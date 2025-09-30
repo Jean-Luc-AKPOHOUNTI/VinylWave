@@ -40,7 +40,7 @@
                     exceptionnelle qui respecte l'essence même de chaque note.
                 </p>
                 <div class="cta-buttons">
-                    <button class="btn-primary">
+                    <button class="btn-primary" id="start-listening-btn">
                         Commencer l'Écoute
                     </button>
                 </div>
@@ -80,10 +80,42 @@
             </div>
             
             <div class="artist-info-display">
-                <h2 class="current-artist-name">Ninho</h2>
+                <h2 class="current-artist-name"></h2>
             </div>
-            
+
         </div>
+        
+        <!-- Modal Instructions -->
+        <div id="instructions-modal" class="instructions-modal">
+            <div class="modal-backdrop"></div>
+            <div class="instructions-content">
+                <div class="instructions-header">
+                    <h3>🎵 Comment naviguer</h3>
+                    <button class="close-instructions" aria-label="Fermer">×</button>
+                </div>
+                <div class="instructions-body">
+                    <div class="instruction-item">
+                        <div class="keys-group">
+                            <span class="key">←</span>
+                            <span class="key">→</span>
+                        </div>
+                        <span>Naviguer entre les artistes</span>
+                    </div>
+                    <div class="instruction-item">
+                        <span class="key">Entrée</span>
+                        <span>Sélectionner un artiste</span>
+                    </div>
+                    <div class="instruction-item">
+                        <span class="key">Échap</span>
+                        <span>Quitter la section</span>
+                    </div>
+                </div>
+                <div class="instructions-footer">
+                    <button class="got-it-btn">J'ai compris !</button>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <section id="playlists" class="playlist-section" style="display: none;">
@@ -155,7 +187,6 @@
                         <div class="track-number">1</div>
                         <div class="track-info">
                             <div class="track-title">Reine</div>
-                            <div class="track-artist">Dadju</div>
                         </div>
                         <div class="track-duration">3:28</div>
                         <div class="track-actions">
@@ -176,7 +207,6 @@
                         <div class="track-number">2</div>
                         <div class="track-info">
                             <div class="track-title">Jaloux</div>
-                            <div class="track-artist">Dadju</div>
                         </div>
                         <div class="track-duration">3:15</div>
                         <div class="track-actions">
@@ -197,7 +227,6 @@
                         <div class="track-number">3</div>
                         <div class="track-info">
                             <div class="track-title">Bob Marley</div>
-                            <div class="track-artist">Dadju</div>
                         </div>
                         <div class="track-duration">3:42</div>
                         <div class="track-actions">
@@ -218,7 +247,6 @@
                         <div class="track-number">4</div>
                         <div class="track-info">
                             <div class="track-title">Compliqué</div>
-                            <div class="track-artist">Dadju</div>
                         </div>
                         <div class="track-duration">3:33</div>
                         <div class="track-actions">
