@@ -1,5 +1,6 @@
-// Base de données des artistes - Organisée par popularité
-const artistsData = {
+import { type Artist } from '../types'
+
+export const artistsData: Record<string, Artist> = {
     "gims": {
         "id": "gims",
         "name": "Gims",
@@ -32,10 +33,10 @@ const artistsData = {
                 ]
             },
             {
-                "id": "le-jeu-des-7",
-                "title": "Le jeu des 7 : La pilule bleue / La pilule rouge",
+                "id": "le-nord-se-souvient",
+                "title": "Le nord se souvient",
                 "year": 2015,
-                "cover": "images/albums/le-jeu-des-7.jpg",
+                "cover": "images/albums/le-nord-se-souvient.jpg",
                 "tracks": [
                     { "title": "Brisé", "duration": "3:50" },
                     { "title": "Melynda Gates", "duration": "3:36" },
@@ -68,10 +69,22 @@ const artistsData = {
                 ]
             },
             {
-                "id": "le-carre",
-                "title": "Le carré",
+                "id": "le-fléau",
+                "title": "Le Fléau",
                 "year": 2022,
-                "cover": "images/albums/le-carre.jpg",
+                "cover": "images/albums/le-fléau.jpg",
+                "tracks": [
+                    { "title": "Maintenant", "duration": "3:30" },
+                    { "title": "GJS", "duration": "3:42" },
+                    { "title": "Origami", "duration": "3:27" },
+                    { "title": "Après vous", "duration": "3:35" }
+                ]
+            },
+            {
+                "id": "Les_Dernières_Volontés_de_Mozart",
+                "title": "Les Dernières Volontés de Mozart",
+                "year": 2022,
+                "cover": "images/albums/Les_Dernières_Volontés_de_Mozart.jpg",
                 "tracks": [
                     { "title": "Maintenant", "duration": "3:30" },
                     { "title": "GJS", "duration": "3:42" },
@@ -83,85 +96,134 @@ const artistsData = {
     },
 
     "dadju": {
-        id: "dadju",
-        name: "Dadju",
-        image: "images/artists/Dadju.jpg",
-        popularity: 95,
-        albums: [
+        "id": "dadju",
+        "name": "Dadju",
+        "image": "images/artists/Dadju.jpg",
+        "popularity": 95,
+        "albums": [
             {
-                id: "gentleman-20",
-                title: "Gentleman 2.0",
-                year: 2017,
-                cover: "images/albums/gentleman-20.jpg",
-                tracks: [
-                    { title: "Reine", duration: "3:28" },
-                    { title: "Jaloux", duration: "3:15" },
-                    { title: "Bob Marley", duration: "3:42" },
-                    { title: "Compliqué", duration: "3:33" }
+                "id": "gentleman-20",
+                "title": "Gentleman 2.0",
+                "year": 2017,
+                "cover": "images/albums/gentleman-20.jpg",
+                "tracks": [
+                    { "title": "Reine", "duration": "3:28" },
+                    { "title": "Jaloux", "duration": "3:15" },
+                    { "title": "Bob Marley", "duration": "3:42" },
+                    { "title": "Compliqué", "duration": "3:33" }
                 ]
             },
             {
-                id: "poison-ou-antidote",
-                title: "Poison ou antidote",
-                year: 2021,
-                cover: "images/albums/poison-ou-antidote.webp",
-                tracks: [
-                    { title: "Dieu merci", duration: "3:18" },
-                    { title: "Grand bain", duration: "3:25" },
-                    { title: "Bobo au cœur", duration: "3:37" },
-                    { title: "Makila", duration: "3:44" }
+                "id": "poison-ou-antidote",
+                "title": "Poison ou antidote",
+                "year": 2021,
+                "cover": "images/albums/poison-ou-antidote.webp",
+                "tracks": [
+                    { "title": "Dieu merci", "duration": "3:18" },
+                    { "title": "Grand bain", "duration": "3:25" },
+                    { "title": "Bobo au cœur", "duration": "3:37" },
+                    { "title": "Makila", "duration": "3:44" }
+                ]
+            },
+            {
+                "id": "cullinan",
+                "title": "Cullinan",
+                "year": 2022,
+                "cover": "images/albums/cullinan.jpg",
+                "tracks": [
+                    { "title": "Toko Toko", "duration": "3:20" },
+                    { "title": "Piqué", "duration": "3:12" },
+                    { "title": "Ambassadeur", "duration": "3:30" },
+                    { "title": "C'est pas bon", "duration": "3:15" }
+                ]
+            },
+            {
+                "id": "heritage",
+                "title": "Héritage",
+                "year": 2024,
+                "cover": "images/albums/heritage.jpg",
+                "tracks": [
+                    { "title": "Ici bas", "duration": "3:40" },
+                    { "title": "Mauvais", "duration": "3:25" },
+                    { "title": "Dernière fois", "duration": "3:50" },
+                    { "title": "Sauce", "duration": "3:30" }
                 ]
             }
         ]
     },
 
     "tiakola": {
-        id: "tiakola",
-        name: "Tiakola",
-        image: "images/artists/tiakola.webp",
-        popularity: 90,
-        albums: [
+        "id": "tiakola",
+        "name": "Tiakola",
+        "image": "images/artists/tiakola.webp",
+        "popularity": 90,
+        "albums": [
             {
-                id: "melodie",
-                title: "Mélodie",
-                year: 2022,
-                cover: "images/albums/melodie.jpg",
-                tracks: [
-                    { title: "La clé", duration: "2:58" },
-                    { title: "Gasolina", duration: "3:12" },
-                    { title: "Mama", duration: "3:05" },
-                    { title: "Séléné", duration: "3:28" }
+                "id": "melodie",
+                "title": "Mélodie",
+                "year": 2022,
+                "cover": "images/albums/melodie.jpg",
+                "tracks": [
+                    { "title": "La clé", "duration": "2:58" },
+                    { "title": "Gasolina", "duration": "3:12" },
+                    { "title": "Mama", "duration": "3:05" },
+                    { "title": "Séléné", "duration": "3:28" }
                 ]
             },
             {
-                id: "libre",
-                title: "Libre",
-                year: 2023,
-                cover: "images/albums/libre.jpg",
-                tracks: [
-                    { title: "Libre", duration: "3:15" },
-                    { title: "Melo", duration: "2:48" },
-                    { title: "Sombre", duration: "3:22" }
+                "id": "bdlm",
+                "title": "BDLM",
+                "year": 2024,
+                "cover": "images/albums/libre.jpg",
+                "tracks": [
+                    { "title": "X", "duration": "3:10" },
+                    { "title": "Champagne", "duration": "2:55" },
+                    { "title": "Mawan", "duration": "3:20" },
+                    { "title": "Joli", "duration": "3:00" }
                 ]
             }
         ]
     },
 
     "burna-boy": {
-        id: "burna-boy",
-        name: "Burna Boy",
-        image: "images/artists/burna-boy.webp",
-        popularity: 98,
-        albums: [
+        "id": "burna-boy",
+        "name": "Burna Boy",
+        "image": "images/artists/burna-boy.webp",
+        "popularity": 98,
+        "albums": [
             {
-                id: "twice-as-tall",
-                title: "Twice As Tall",
-                year: 2020,
-                cover: "images/albums/twice-as-tall.webp",
-                tracks: [
-                    { title: "Level Up", duration: "3:10" },
-                    { title: "Monsters", duration: "3:45" },
-                    { title: "Wonderful", duration: "3:30" }
+                "id": "twice-as-tall",
+                "title": "Twice As Tall",
+                "year": 2020,
+                "cover": "images/albums/twice-as-tall.webp",
+                "tracks": [
+                    { "title": "Level Up", "duration": "3:10" },
+                    { "title": "Monsters", "duration": "3:45" },
+                    { "title": "Wonderful", "duration": "3:30" }
+                ]
+            },
+            {
+                "id": "no-sign-of-weakness",
+                "title": "No Sign of Weakness",
+                "year": 2025,
+                "cover": "images/albums/no-sign-of-weakness.jpg",
+                "tracks": [
+                    { "title": "Bundle by Bundle", "duration": "3:05" },
+                    { "title": "No Sign of Weakness", "duration": "2:58" },
+                    { "title": "No Panic", "duration": "3:15" },
+                    { "title": "Update", "duration": "3:20" }
+                ]
+            },
+            {
+                "id": "i-told-them",
+                "title": "I Told Them",
+                "year": 2023,
+                "cover": "images/albums/i-told-them.jpg",
+                "tracks": [
+                    { "title": "I Told Them", "duration": "3:00" },
+                    { "title": "Normal", "duration": "3:10" },
+                    { "title": "On Form", "duration": "3:05" },
+                    { "title": "Sittin' On Top Of The World", "duration": "3:38" }
                 ]
             }
         ]
@@ -523,17 +585,18 @@ const artistsData = {
             }
         ]
     }
-};
-
-// Fonction pour obtenir les artistes triés par popularité
-function getArtistsByPopularity() {
-    return Object.values(artistsData).sort((a, b) => b.popularity - a.popularity);
+}
+export function getArtistsByPopularity(): Artist[] {
+    return Object.values(artistsData).sort((a, b) => b.popularity - a.popularity)
 }
 
-// Fonction de recherche d'artistes
-function searchArtists(query) {
-    const lowercaseQuery = query.toLowerCase();
+export function searchArtists(query: string): Artist[] {
+    const lowercaseQuery = query.toLowerCase()
     return Object.values(artistsData).filter(artist =>
         artist.name.toLowerCase().includes(lowercaseQuery)
-    ).sort((a, b) => b.popularity - a.popularity);
+    ).sort((a, b) => b.popularity - a.popularity)
+}
+
+export function getArtistById(id: string): Artist | undefined {
+    return artistsData[id]
 }
