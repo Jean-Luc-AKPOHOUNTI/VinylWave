@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { type Artist } from '../types'
 
 interface ArtistModalProps {
@@ -8,6 +9,7 @@ interface ArtistModalProps {
 }
 
 export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProps) {
+  const navigate = useNavigate()
   const [searchQuery, setSearchQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const albumsPerPage = 10
@@ -41,7 +43,12 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
   const currentAlbums = filteredAlbums.slice(startIndex, startIndex + albumsPerPage)
 
   const handleAlbumClick = (album: any) => {
-    console.log('Album sélectionné:', album.title)
+    navigate('/playlists', {
+      state: {
+        album: album,
+        artist: artist?.name
+      }
+    })
     onClose()
   }
 
