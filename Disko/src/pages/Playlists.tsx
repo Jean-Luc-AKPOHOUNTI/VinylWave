@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Shuffle, SkipBack, Play, Pause, SkipForward, Repeat, Heart, Plus, Search, Filter } from 'lucide-react'
+import { Shuffle, SkipBack, Play, Pause, SkipForward, Repeat, Heart, Search } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
 import { artistsData } from '../data/artists'
 import { CustomSelect } from '../components/CustomSelect'
@@ -38,7 +38,6 @@ export default function Playlists() {
   const albumData = location.state as AlbumData | null
   const [currentTrack, setCurrentTrack] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
-  const [progress, setProgress] = useState(40)
   const [filters, setFilters] = useState<AllTracksView>({
     searchQuery: '',
     selectedGenre: 'all',
@@ -144,7 +143,7 @@ export default function Playlists() {
               <span>{(album?.tracks || allTracks)[currentTrack]?.duration || '0:00'}</span>
             </div>
             <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden cursor-pointer relative">
-              <div className="h-full bg-gradient-to-r from-orange-500 to-orange-400 rounded-full transition-all duration-100 relative" style={{ width: `${progress}%` }}>
+              <div className="h-full bg-gradient-to-r from-orange-500 to-orange-400 rounded-full transition-all duration-100 relative">
                 <div className="absolute -right-1.5 top-1/2 transform -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-md shadow-orange-500/50"></div>
               </div>
             </div>
